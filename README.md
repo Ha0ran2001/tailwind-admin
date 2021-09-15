@@ -21,10 +21,10 @@ const useDarkMode = (): React.Dispatch<React.SetStateAction<string>>[] => {
 }
 
 export default useDarkMode;
-```js
+```
 #### 使用：
 
-```
+```js
 const [theme, setTheme] = useDarkMode();
 
 // 设置 light 的按钮
