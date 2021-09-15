@@ -1,7 +1,7 @@
 ﻿# tailwind-admin
 
 ## 开启了 darkmode，设置为 class 手动切换
-```
+```js
 useDarkMode.tsx
 
 
@@ -21,7 +21,7 @@ const useDarkMode = (): React.Dispatch<React.SetStateAction<string>>[] => {
 }
 
 export default useDarkMode;
-```
+```js
 #### 使用：
 
 ```
