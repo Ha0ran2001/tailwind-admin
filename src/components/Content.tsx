@@ -1,4 +1,5 @@
-import * as React from 'react'
+import * as React from 'react';
+import { Link, Router } from '@reach/router';
 
 import Header from './Header';
 import RecruitLists from '../pages/RecruitLists';
@@ -9,7 +10,9 @@ const Content: React.FC = () => {
       <Header />
       <div className='overflow-auto h-screen pb-24 pt-0 pr-0 dark:bg-gray-900'>
         <div className='flex items-center justify-center py-10'>
-          <RecruitLists />
+          <Router>
+            <RecruitLists path='/recruitLists' />
+          </Router>
         </div>
       </div>
     </div>

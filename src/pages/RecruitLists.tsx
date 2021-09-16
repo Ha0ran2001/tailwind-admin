@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { RouteComponentProps } from '@reach/router';
+
 import Table from '../components/Table';
 import axios from 'axios';
 axios.defaults.baseURL = 'http://39.101.65.80:8081/';
@@ -11,7 +13,7 @@ interface Infomation {
   phone: string;
 }
 
-const RecruitLists: React.FC = () => {
+const RecruitLists: React.FC<RouteComponentProps> = () => {
 
   const [resultList, setResultList] = React.useState<Infomation[][]>(null!);
   const [pageConfig, setPageConfig] = React.useState({ totalPage: 0 });
