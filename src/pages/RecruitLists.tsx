@@ -22,17 +22,8 @@ const RecruitLists: React.FC<RouteComponentProps> = () => {
   // 获取数据
   const getInfo = async () => {
     let res = await axios.get('selectAll');
-    // let data = res.data.data;
-    let data = [
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-      { name: '111', xh: '12212', college: 'sss', major: 'ssss', phone: '3242368' },
-    ]
-    const chunk = 2; // 每页展示的数据条数
+    let data = res.data.data;
+    const chunk = 10; // 每页展示的数据条数
     // 请求过来的数据分成 chunk 个数据为一个数组的数组
     for (let i = 0; i < data.length; i += chunk) {
       result.push(data.slice(i, i + chunk));
