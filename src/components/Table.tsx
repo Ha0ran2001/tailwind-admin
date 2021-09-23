@@ -4,16 +4,7 @@ import axios from 'axios';
 import Pagination from '../components/Pagination';
 import '../style/table.css';
 
-const Thead = ['学号', '学院', '专业', '电话号码', '操作'];
-
-
-export interface Infomation {
-  name: string;
-  xh: string;
-  college: string;
-  major: string;
-  phone: string;
-}
+import { Infomation } from '../types/information';
 
 interface TableProps {
   resultList: Infomation[][];
@@ -22,10 +13,13 @@ interface TableProps {
   }
 }
 
+const Thead = ['学号', '学院', '专业', '电话号码', '操作'];
+
 const Table: React.FC<TableProps> = ({ resultList, pageConfig }) => {
-  const [List, setList] = useState<Infomation[]>(null!);
+
+  const [List, setList] = useState<Infomation[]>(null!); // 信息列表
   const [isOpen, setIsOpen] = useState(false);
-  const [xh, setXh] = useState('');
+  const [xh, setXh] = useState(''); // 学号
 
   const getCurrentPage = (currentpage: number) => {
     console.log(resultList[0]);
@@ -96,8 +90,8 @@ const Table: React.FC<TableProps> = ({ resultList, pageConfig }) => {
           </div>
         </Dialog>
       </Transition>
-      <div className='flex flex-col items-center space-y-4'>
 
+      <div className='flex flex-col items-center space-y-4'>
         <table className='table text-gray-400 border-separate space-y-6'>
           <thead className='bg-white dark:bg-gray-800 text-gray-500'>
             <tr>

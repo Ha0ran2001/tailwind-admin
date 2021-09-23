@@ -8,6 +8,7 @@ const Header: React.FC = () => {
 
   return (
     <header className='w-full shadow-lg bg-white dark:text-white dark:bg-gray-800 items-center h-16 rounded-2xl z-40 flex justify-between px-4'>
+      {/* 切换暗黑和亮模式 */}
       <div className='rounded-full bg-gray-200 dark:bg-gray-900 p-1 flex'>
         <div className='px-3 py-1 bg-gray-300 dark:bg-transparent rounded-full cursor-pointer' onClick={() => setTheme('light')}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
