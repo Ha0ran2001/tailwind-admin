@@ -1,10 +1,10 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react'
 import axios from 'axios';
-import Pagination from '../components/Pagination';
-import '../style/table.css';
+import Pagination from '@/components/Pagination';
+import '@/style/table.css';
 
-import { Infomation } from '../types/information';
+import { Infomation } from '@/types/information';
 
 interface TableProps {
   resultList: Infomation[][];

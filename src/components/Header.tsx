@@ -1,7 +1,7 @@
 import * as React from 'react';
-import useDarkMode from '../utils/Hooks/useDarkMode';
+import useDarkMode from '@/utils/Hooks/useDarkMode';
 
-import avatar from '../assets/logo/logo.png';
+import avatar from '@/assets/logo/logo.png';
 
 const Header: React.FC = () => {
   const [theme, setTheme] = useDarkMode();

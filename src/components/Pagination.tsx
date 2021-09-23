@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import '../style/pagination.css';
+import '@/style/pagination.css';
 
 interface PagingProps {
   pageCallbackFn: (currentpage: number) => any;
@@ -75,7 +75,7 @@ const usePaging: React.FC<PagingProps> = (props) => {
     pages.push(
       <li
         className={currentPage === 1 ? 'nomore' : undefined}
-        onClick={prePageHandeler} key={0}
+        onClick={prePageHandeler} key={'上一页'}
       >
         上一页
       </li>);
@@ -85,7 +85,7 @@ const usePaging: React.FC<PagingProps> = (props) => {
       for (let i = 1; i <= totalPage; i++) {
         pages.push(
           <li
-            key={i}
+            key={i + 10}
             onClick={() => pageClick(i)}
             className={currentPage === i ? 'activePage' : undefined}
           >
@@ -113,7 +113,7 @@ const usePaging: React.FC<PagingProps> = (props) => {
 
       // 前面省略号 （当前页码比分组页码(5)大的时候显示省略号）
       if (currentPage > groupCount) {
-        pages.push(<li key={-1}>···</li>);
+        pages.push(<li key={'前省略号'}>···</li>);
       }
 
       // 非第一页和最后一页
@@ -122,7 +122,8 @@ const usePaging: React.FC<PagingProps> = (props) => {
           pages.push(
             <li
               className={currentPage === i ? 'activePage' : undefined}
-              key={i} onClick={() => pageClick(i)}
+              key={i + 100}
+              onClick={() => pageClick(i)}
             >
               {i}
             </li>);
@@ -131,7 +132,7 @@ const usePaging: React.FC<PagingProps> = (props) => {
 
       // 后面省略号
       if (totalPage - startPage >= groupCount + 1) {
-        pages.push(<li key={-2}>···</li>);
+        pages.push(<li key={'省略号'}>···</li>);
       }
 
       // 最后一页

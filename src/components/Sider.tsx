@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link, navigate } from "@reach/router";
 
-import kcsoft_logo from '../assets/logo/logo.png';
+import kcsoft_logo from '@/assets/logo/logo.png';
 
 type NavListsProps = {
   name: string;

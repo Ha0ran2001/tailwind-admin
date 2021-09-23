@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from '@reach/router';
 
-import Table from '../components/Table';
+import Table from '@/components/Table';
+import Search from '@/components/Search';
 
 import axios from 'axios';
 axios.defaults.baseURL = 'http://39.101.65.80:8081/';
